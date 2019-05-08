@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.cjt2325.cameralibrary.JCameraView
+        android:id="@+id/jcameraview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:duration_max="10000"
+        app:iconMargin="20dp"
+        app:iconSize="48dp"
+        />
+</FrameLayout>

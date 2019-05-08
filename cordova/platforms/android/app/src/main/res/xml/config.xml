@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ninecm.np" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="signData">
+        <param name="android-package" value="com.wallet.sign.WalletSignPlugin" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.google.zxing.BarcodeScanner" />
+    </feature>
+    <feature name="ImagePicker">
+        <param name="android-package" value="com.giants.imagepicker.ImagePickerMain" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="AppVersion">
+        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
+    </feature>
+    <feature name="XiCamera">
+        <param name="android-package" value="com.cjt2325.cameralibrary.XiCamera" />
+    </feature>
+    <feature name="request">
+        <param name="android-package" value="com.network.okhttp.RequestPlugin" />
+    </feature>
+    <feature name="Wechat">
+        <param name="android-package" value="xu.li.cordova.wechat.Wechat" />
+    </feature>
+    <feature name="alipay">
+        <param name="android-package" value="cn.hhjjj.alipay.alipay" />
+    </feature>
+    <name>NinePoint</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="http:*" />
+    <access launch-external="yes" origin="https:*" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="WECHATAPPID" value="wxfe5d670f00b33b32" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+</widget>

@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><title>app-project</title><link href=css/app.fd13120cdcb261564ab3ed70d0519382.css rel=stylesheet></head><body style="margin: 0;"><div id=app></div><script type=text/javascript src=cordova.js></script><script type=text/javascript src=src/common/js/config.js></script><script type=text/javascript src=src/common/js/Base64.js></script><script type=text/javascript src=src/common/js/3des.js></script><script type=text/javascript src=src/common/js/store2.min.js></script><script type=text/javascript src=src/common/js/hammer.js></script><script>document.addEventListener("deviceready", onDeviceReady, false);             
+			function onDeviceReady() {
+				var time=setTimeout(function (){  
+		           navigator.splashscreen.hide();
+		           clearTimeout(time);
+		       	}, 1000);
+				document.addEventListener("backbutton", onBackKeyDown, false);
+				window.addEventListener("walletimportpath", onWalletImportPath, false);//ios设备导入钱包
+			}
+			function onBackKeyDown() {  
+				var currentPage=window.location.hash.split('/')[1];
+				if(currentPage=='login-verification'||currentPage==''||currentPage=='login-password'||currentPage=='mine-default'||currentPage=='mall-default'||currentPage=='discover-default'||currentPage=='asset-default'){
+					creatTips('再点击一次退出!');
+				    document.removeEventListener("backbutton", onBackKeyDown, false); // 注销返回键  
+				    document.addEventListener("backbutton", exitApp, false);//绑定退出事件  
+				    var intervalID = window.setInterval(function() {  
+				        window.clearInterval(intervalID);  
+				        document.removeEventListener("backbutton", exitApp, false); // 注销退出事件  
+				        document.addEventListener("backbutton", onBackKeyDown, false); // 绑定返回键  
+				    }, 2000); 
+			    }else{
+			    	window.history.go(-1);
+			    }
+			} 
+			function onWalletImportPath(status) {
+                var currentPage=window.location.hash.split('/')[1];
+                if(currentPage == "" || currentPage == "login-password" || currentPage == "login-verification" || currentPage == "register" || currentPage == "retrieve-password"){
+                    creatTips('请登录后导入钱包');
+                }else{
+                    store.set("walletImportPath",status.path);
+                    var mainPagePath=window.location.href.split('#/')[0];
+                    window.location.href=mainPagePath+"#/import-wallet";
+                }
+                if(currentPage == "import-wallet"){
+                    window.location.reload();
+                }
+            }
+			function exitApp(){ 
+				navigator.app.exitApp();   
+			}</script><script type=text/javascript src=js/manifest.5abe310ef2fafcf81b83.js></script><script type=text/javascript src=js/vendor.db64095d553428c6e23f.js></script><script type=text/javascript src=js/app.91e6c8c51dbca50dd43e.js></script></body></html>

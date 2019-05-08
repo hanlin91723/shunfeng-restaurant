@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-request" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>request</name>
+	<js-module name="request" src="www/request.js"><clobbers target="cordova.plugins.request" /></js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="request">
+				<param name="android-package" value="com.network.okhttp" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml" />
+		<source-file src="src/android/com/network/okhttp/RequestPlugin.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/HttpsUtils.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/OkhttpUtils.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/FileCallBack.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/ProgressModel.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/ProgressRequestBody.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/ProgressResponseBody.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/UpdateService.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/com/network/okhttp/DeviceUtil.java" target-dir="src/com/network/okhttp" />
+		<source-file src="src/android/res/raw/test.xichain.com.cn.cer" target-dir="res/raw" />
+		<framework src="com.squareup.okhttp3:okhttp:3.9.1"/>
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="request">
+				<param name="ios-package" value="request" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/request.m" />
+        <source-file src="src/test.xichain.com.cn.cer" />
+		<header-file src="src/ios/AFNetworking/AFNetworking.h" />
+		<header-file src="src/ios/AFNetworking/AFHTTPSessionManager.h" />
+		<source-file src="src/ios/AFNetworking/AFHTTPSessionManager.m" />
+		<header-file src="src/ios/AFNetworking/AFNetworkReachabilityManager.h" />
+		<source-file src="src/ios/AFNetworking/AFNetworkReachabilityManager.m" />
+		<header-file src="src/ios/AFNetworking/AFSecurityPolicy.h" />
+		<source-file src="src/ios/AFNetworking/AFSecurityPolicy.m" />
+		<header-file src="src/ios/AFNetworking/AFURLRequestSerialization.h" />
+		<source-file src="src/ios/AFNetworking/AFURLRequestSerialization.m" />
+		<header-file src="src/ios/AFNetworking/AFURLResponseSerialization.h" />
+		<source-file src="src/ios/AFNetworking/AFURLResponseSerialization.m" />
+		<header-file src="src/ios/AFNetworking/AFURLSessionManager.h" />
+		<source-file src="src/ios/AFNetworking/AFURLSessionManager.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h" />
+		<!--<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.m" />-->
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" />
+
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" />
+		<header-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" />
+		<source-file src="src/ios/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" />
+
+	</platform>
+</plugin>

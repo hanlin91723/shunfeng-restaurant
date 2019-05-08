@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "NinePoint",
+  "short_name": "NinePoint",
+  "version": "com.ninecm.np",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html"
+}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ninecm.np" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>NinePoint</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="http:*" />
+    <access launch-external="yes" origin="https:*" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="Orientation" value="portrait" />
+    <platform name="android">
+        <preference name="AndroidLaunchMode" value="singleTop" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
+        <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-signData" spec="..\..\cordova-plugins\cordova-plugin-signData" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-barcodescanner" spec="file:../../cordova-plugins/cordova-plugin-barcodescanner" />
+    <plugin name="cordova-plugin-device" spec="^2.0.2" />
+    <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
+    <plugin name="cordova-plugin-xitech-xicamera" spec="..\..\cordova-plugins\cordova-plugin-xitech-xicamera" />
+    <plugin name="cordova-plugin-ImagePicker" spec="..\..\cordova-plugins\cordova-plugin-ImagePicker" />
+    <plugin name="cordova-plugin-request" spec="..\..\cordova-plugins\cordova-plugin-request" />
+    <plugin name="cordova-plugin-wechat" spec="E:\XI\project\jiudian\cordova-plugin-wechat">
+        <variable name="WECHATAPPID" value="wxfe5d670f00b33b32" />
+    </plugin>
+    <plugin name="cordova-plugin-alipay-v2" spec="..\..\cordova-plugins\cordova-plugin-alipay-v2">
+        <variable name="APP_ID" value="2018120462484280" />
+    </plugin>
+    <engine name="android" spec="^7.0.0" />
+    <engine name="browser" spec="^5.0.3" />
+</widget>

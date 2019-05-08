@@ -1,0 +1,50 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-signData": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.xitech.pailian"
+    },
+    "cordova-plugin-xitech-xicamera": {
+      "PACKAGE_NAME": "com.xitech.atm"
+    },
+    "cordova-plugin-ImagePicker": {
+      "PACKAGE_NAME": "com.xitech.atm"
+    },
+    "cordova-plugin-request": {
+      "PACKAGE_NAME": "com.xitech.atm"
+    },
+    "cordova-plugin-wechat": {
+      "WECHATAPPID": "wx21722f536a47f71a",
+      "PACKAGE_NAME": "com.xitech.atm"
+    },
+    "cordova-plugin-alipay-v2": {
+      "APP_ID": "2018120462484280",
+      "PACKAGE_NAME": "com.ninecm.np"
+    }
+  },
+  "dependent_plugins": {}
+}

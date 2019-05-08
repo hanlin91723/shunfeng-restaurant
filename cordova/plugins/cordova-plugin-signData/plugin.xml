@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-signData" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>signData</name>
+<js-module name="signData" src="www/signData.js">
+<clobbers target="cordova.plugins.signData" />
+</js-module>
+	<platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+		<feature name="signData"><param name="android-package" value="com.wallet.sign.WalletSignPlugin" />
+		</feature></config-file><config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/com/wallet/sign/WalletSignPlugin.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/wallet/sign/CryptoException.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/wallet/sign/InvalidArgumentException.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/wallet/sign/EncryptedFileUtils.java" target-dir="src/com/wallet/sign" />
+	    <!--<source-file src="src/android/com/wallet/sign/FileUtil.java" target-dir="src/com/wallet/sign"/>-->
+		<!--<source-file src="src/android/com/wallet/sign/GsonQuick.java" target-dir="src/com/wallet/sign"/>-->
+		<source-file src="src/android/com/wallet/sign/SignUtils.java" target-dir="src/com/wallet/sign" />
+		
+		
+		<source-file src="src/android/com/xitech/utils/FileUtil.java" target-dir="src/com/xitech/utils" />
+		<source-file src="src/android/com/xitech/utils/GsonQuick.java" target-dir="src/com/xitech/utils" />
+		<source-file src="src/android/com/xitech/utils/SPUtils.java" target-dir="src/com/xitech/utils" />
+		<source-file src="src/android/com/ui/SearchActivity.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/ui/FileAdapter.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/ui/FileBean.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/wallet/sign/CSRHelper.java" target-dir="src/com/wallet/sign" />
+		
+		<resource-file src="src/android/com/res/layout/item_serach.xml" target="res/layout/item_serach.xml" />
+		<resource-file src="src/android/com/res/layout/activity_search.xml" target="res/layout/activity_search.xml" />		
+		<resource-file src="src/android/com/res/mipmap-hdpi/icon_wallet_file.png" target="res/mipmap-hdpi/icon_wallet_file.png" />
+		<resource-file src="src/android/com/res/drawable/file_retract.png" target="res/drawable-port-hdpi/file_retract.png" />
+		<resource-file src="src/android/com/res/drawable/file_spread.png" target="res/drawable-port-hdpi/file_spread.png" />		
+		<resource-file src="src/android/com/res/drawable/file_upfolder.xml" target="res/drawable-port-hdpi/file_upfolder.xml" />
+		<resource-file src="src/android/com/res/drawable/ic_back.xml" target="res/drawable-port-hdpi/ic_back.xml" />
+		
+		
+		<!--<source-file src="src/android/com/wallet/sign/SPUtils.java" target-dir="src/com/wallet/sign"/>-->
+		<source-file src="src/android/com/wallet/sign/Results.java" target-dir="src/com/wallet/sign" />
+		<source-file src="src/android/com/wallet/sign/WalletBean.java" target-dir="src/com/wallet/sign" />
+		<lib-file src="src/android/libs/bcpkix-jdk15on-1.57.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/bcprov-jdk15on-1.57.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/commons-io-2.5.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/commons-logging-1.2.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/bcpg-jdk15on-1.58.0.0.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/bcpkix-jdk15on-1.58.0.0.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/core-1.58.0.0.jar" target-dir="libs" />
+		<lib-file src="src/android/libs/prov-1.58.0.0.jar" target-dir="libs" />
+        <framework src="com.google.code.gson:gson:2.6.1"/>
+    </platform>
+     <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="signData">
+                <param name="ios-package" value="signData" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/signData.mm" />
+        <source-file src="src/ios/Sign.mm" />
+        <header-file src="src/ios/AES128Util.h" />
+        <source-file src="src/ios/AES128Util.m" />
+        <source-file src="src/ios/ECDSA_Sig" />
+    </platform>
+</plugin>

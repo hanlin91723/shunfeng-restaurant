@@ -1,0 +1,102 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@^5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-signData": {
+    "source": {
+      "type": "local",
+      "path": "E:\\project\\cordova\\pailian-app\\cordova\\node_modules\\sign"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file@^6.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-barcodescanner": {
+    "source": {
+      "type": "local",
+      "path": "D:\\GitLinux\\pailian-app\\cordova\\node_modules\\cordova-plugin-barcodescanner"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-app-version": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-version"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-xitech-xicamera": {
+    "source": {
+      "type": "local",
+      "path": "E:\\XI\\project\\jiudian\\atm-app\\cordova\\node_modules\\xicamera"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ImagePicker": {
+    "source": {
+      "type": "local",
+      "path": "E:\\XI\\project\\jiudian\\atm-app\\cordova\\node_modules\\cordova-plugin-ImagePicker"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-request": {
+    "source": {
+      "type": "local",
+      "path": "E:\\XI\\project\\jiudian\\atm-app\\cordova\\node_modules\\request"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-wechat": {
+    "source": {
+      "type": "local",
+      "path": "E:\\XI\\project\\jiudian\\atm-app\\cordova\\node_modules\\cordova-plugin-wechat"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WECHATAPPID": "wx21722f536a47f71a"
+    }
+  },
+  "cordova-plugin-alipay-v2": {
+    "source": {
+      "type": "local",
+      "path": "E:\\XI\\project\\jiudian\\atm-app\\cordova\\node_modules\\cordova-plugin-alipay-v2"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID": "2018120462484280"
+    }
+  }
+}

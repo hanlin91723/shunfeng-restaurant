@@ -1,0 +1,22 @@
+{
+  "name": "sign",
+  "id": "SimpleMath",
+  "version": "1.0.0",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [],
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

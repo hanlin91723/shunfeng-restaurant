@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><title>app-project</title><link href=css/app.bbad25a55b667dad6cb049dd56f50e35.css rel=stylesheet></head><body style="margin: 0;"><div id=app></div><script type=text/javascript src=cordova.js></script><script type=text/javascript src=src/common/js/config.js></script><script type=text/javascript src=src/common/js/store2.min.js></script><script type=text/javascript src=src/common/js/hammer.js></script><script>document.addEventListener("deviceready", onDeviceReady, false);             
+			function onDeviceReady() {
+				var time=setTimeout(function (){  
+		           navigator.splashscreen.hide();
+		           clearTimeout(time);
+		       	}, 1000);
+				document.addEventListener("backbutton", onBackKeyDown, false);
+			}
+			function onBackKeyDown() {  
+				var currentPage=window.location.hash.split('/')[1];
+				if(currentPage==''||currentPage=='login-password'||currentPage=='mine-default'||currentPage=='register'||currentPage=='store-default'||currentPage=='goods-list'){
+					creatTips('再点击一次退出程序');
+				    document.removeEventListener("backbutton", onBackKeyDown, false); // 注销返回键  
+				    document.addEventListener("backbutton", exitApp, false);//绑定退出事件  
+				    var intervalID = window.setInterval(function() {  
+				        window.clearInterval(intervalID);
+				        document.removeEventListener("backbutton", exitApp, false); // 注销退出事件  
+				        document.addEventListener("backbutton", onBackKeyDown, false); // 绑定返回键  
+				    }, 2000);
+			    }else{
+			    	window.history.go(-1);
+			    }
+			}
+			function exitApp(){ 
+				navigator.app.exitApp();
+			}</script><script type=text/javascript src=js/manifest.bf01466abd9089bfb937.js></script><script type=text/javascript src=js/vendor.9028b1dbfee867a649e0.js></script><script type=text/javascript src=js/app.3a8c09298dc4a0c0fddd.js></script></body></html>

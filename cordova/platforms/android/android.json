@@ -1,0 +1,472 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"signData\"><param name=\"android-package\" value=\"com.wallet.sign.WalletSignPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"cdvfile:*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.google.zxing.BarcodeScanner\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.giants.imagepicker.ImagePickerMain\" /></feature>",
+              "count": 2
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"XiCamera\"><param name=\"android-package\" value=\"com.cjt2325.cameralibrary.XiCamera\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"request\"><param name=\"android-package\" value=\"com.network.okhttp.RequestPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Wechat\"><param name=\"android-package\" value=\"xu.li.cordova.wechat.Wechat\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"WECHATAPPID\" value=\"wxfe5d670f00b33b32\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"alipay\"><param name=\"android-package\" value=\"cn.hhjjj.alipay.alipay\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 2
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<activity android:name=\"com.google.zxing.activity.CaptureActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/ImagePickerTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"com.giants.imagepicker.ui.ImageBaseActivity\" />",
+              "count": 2
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|screenSize\" android:name=\"com.giants.imagepicker.ui.ImageGridActivity\" android:theme=\"@style/ImagePickerTheme\" />",
+              "count": 2
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|screenSize\" android:hardwareAccelerated=\"false\" android:name=\"com.giants.imagepicker.ui.ImageCropActivity\" android:theme=\"@style/ImagePickerTheme\" />",
+              "count": 2
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|screenSize\" android:name=\"com.giants.imagepicker.ui.ImagePreviewActivity\" android:theme=\"@style/ImagePickerThemeFullScreen\" />",
+              "count": 2
+            },
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"com.giants.imagepicker.ImagePickerProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+              "count": 2
+            },
+            {
+              "xml": "<activity android:name=\"com.cjt2325.cameralibrary.CameraActivity\" android:theme=\"@style/ImagePickerTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:exported=\"true\" android:label=\"@string/launcher_name\" android:name=\".wxapi.WXEntryActivity\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><data android:scheme=\"wxfe5d670f00b33b32\" /></intent-filter></activity>",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:exported=\"true\" android:label=\"@string/launcher_name\" android:launchMode=\"singleTop\" android:name=\".wxapi.WXPayEntryActivity\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><data android:scheme=\"wxfe5d670f00b33b32\" /></intent-filter></activity>",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|keyboardHidden|navigation|screenSize\" android:exported=\"false\" android:name=\"com.alipay.sdk.app.H5PayActivity\" android:screenOrientation=\"behind\" android:windowSoftInputMode=\"adjustResize|stateHidden\"></activity>",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|keyboardHidden|navigation\" android:exported=\"false\" android:name=\"com.alipay.sdk.app.H5AuthActivity\" android:screenOrientation=\"behind\" android:windowSoftInputMode=\"adjustResize|stateHidden\"></activity>",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-signData": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-xitech-xicamera": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-ImagePicker": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-request": {
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-wechat": {
+      "WECHATAPPID": "wxfe5d670f00b33b32",
+      "PACKAGE_NAME": "com.ninecm.np"
+    },
+    "cordova-plugin-alipay-v2": {
+      "APP_ID": "2018120462484280",
+      "PACKAGE_NAME": "com.ninecm.np"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-signData.signData",
+      "file": "plugins/cordova-plugin-signData/www/signData.js",
+      "pluginId": "cordova-plugin-signData",
+      "clobbers": [
+        "cordova.plugins.signData"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.DirectoryEntry",
+      "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.DirectoryEntry"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.DirectoryReader",
+      "file": "plugins/cordova-plugin-file/www/DirectoryReader.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.DirectoryReader"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.Entry",
+      "file": "plugins/cordova-plugin-file/www/Entry.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.Entry"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.File",
+      "file": "plugins/cordova-plugin-file/www/File.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.File"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileEntry",
+      "file": "plugins/cordova-plugin-file/www/FileEntry.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileEntry"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileError",
+      "file": "plugins/cordova-plugin-file/www/FileError.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileReader",
+      "file": "plugins/cordova-plugin-file/www/FileReader.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileReader"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileSystem",
+      "file": "plugins/cordova-plugin-file/www/FileSystem.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileSystem"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileUploadOptions",
+      "file": "plugins/cordova-plugin-file/www/FileUploadOptions.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileUploadOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileUploadResult",
+      "file": "plugins/cordova-plugin-file/www/FileUploadResult.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileUploadResult"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.FileWriter",
+      "file": "plugins/cordova-plugin-file/www/FileWriter.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.FileWriter"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.Flags",
+      "file": "plugins/cordova-plugin-file/www/Flags.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.Flags"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.LocalFileSystem",
+      "file": "plugins/cordova-plugin-file/www/LocalFileSystem.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.LocalFileSystem"
+      ],
+      "merges": [
+        "window"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.Metadata",
+      "file": "plugins/cordova-plugin-file/www/Metadata.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.Metadata"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.ProgressEvent",
+      "file": "plugins/cordova-plugin-file/www/ProgressEvent.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.ProgressEvent"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.fileSystems",
+      "file": "plugins/cordova-plugin-file/www/fileSystems.js",
+      "pluginId": "cordova-plugin-file"
+    },
+    {
+      "id": "cordova-plugin-file.requestFileSystem",
+      "file": "plugins/cordova-plugin-file/www/requestFileSystem.js",
+      "pluginId": "cordova-plugin-file",
+      "clobbers": [
+        "window.requestFileSystem"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.resolveLocalFileSystemURI",
+      "file": "plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js",
+      "pluginId": "cordova-plugin-file",
+      "merges": [
+        "window"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.isChrome",
+      "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+      "pluginId": "cordova-plugin-file",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-file.androidFileSystem",
+      "file": "plugins/cordova-plugin-file/www/android/FileSystem.js",
+      "pluginId": "cordova-plugin-file",
+      "merges": [
+        "FileSystem"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file.fileSystems-roots",
+      "file": "plugins/cordova-plugin-file/www/fileSystems-roots.js",
+      "pluginId": "cordova-plugin-file",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-file.fileSystemPaths",
+      "file": "plugins/cordova-plugin-file/www/fileSystemPaths.js",
+      "pluginId": "cordova-plugin-file",
+      "merges": [
+        "cordova"
+      ],
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "cordova-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-app-version.AppVersionPlugin",
+      "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+      "pluginId": "cordova-plugin-app-version",
+      "clobbers": [
+        "cordova.getAppVersion"
+      ]
+    },
+    {
+      "id": "cordova-plugin-xitech-xicamera.XiCamera",
+      "file": "plugins/cordova-plugin-xitech-xicamera/www/XiCamera.js",
+      "pluginId": "cordova-plugin-xitech-xicamera",
+      "clobbers": [
+        "cordova.plugins.XiCamera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ImagePicker.ImagePicker",
+      "file": "plugins/cordova-plugin-ImagePicker/www/ImagePicker.js",
+      "pluginId": "cordova-plugin-ImagePicker",
+      "clobbers": [
+        "ImagePicker"
+      ]
+    },
+    {
+      "id": "cordova-plugin-request.request",
+      "file": "plugins/cordova-plugin-request/www/request.js",
+      "pluginId": "cordova-plugin-request",
+      "clobbers": [
+        "cordova.plugins.request"
+      ]
+    },
+    {
+      "id": "cordova-plugin-wechat.Wechat",
+      "file": "plugins/cordova-plugin-wechat/www/wechat.js",
+      "pluginId": "cordova-plugin-wechat",
+      "clobbers": [
+        "Wechat"
+      ]
+    },
+    {
+      "id": "cordova-plugin-alipay-v2.alipay",
+      "file": "plugins/cordova-plugin-alipay-v2/www/alipay.js",
+      "pluginId": "cordova-plugin-alipay-v2",
+      "clobbers": [
+        "cordova.plugins.alipay"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-signData": "1.0.0",
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-file": "6.0.1",
+    "cordova-plugin-barcodescanner": "1.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-app-version": "0.1.9",
+    "cordova-plugin-xitech-xicamera": "1.0.0",
+    "cordova-plugin-ImagePicker": "0.1.0",
+    "cordova-plugin-request": "1.0.0",
+    "cordova-plugin-wechat": "2.4.0",
+    "cordova-plugin-alipay-v2": "1.0.0"
+  }
+}

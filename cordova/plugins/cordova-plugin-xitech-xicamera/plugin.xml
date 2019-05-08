@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-xitech-xicamera" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>XiCamera</name>
+	<js-module name="XiCamera" src="www/XiCamera.js">
+		<clobbers target="cordova.plugins.XiCamera"/>
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="XiCamera">
+				<param name="android-package" value="com.cjt2325.cameralibrary.XiCamera"/>
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/XiCamera.java" target-dir="src/com/cjt2325/cameralibrary/"/>
+		  <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.cjt2325.cameralibrary.CameraActivity" android:theme="@style/ImagePickerTheme"/>
+        </config-file>
+		<source-file src="src/android/com/cjt2325/cameralibrary/CameraActivity.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/CameraInterface.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/CaptureButton.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/CaptureLayout.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/FoucsView.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/JCameraView.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/ReturnButton.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/TypeButton.java" target-dir="src/com/cjt2325/cameralibrary"/>
+		
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/CaptureListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/ClickListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/ErrorListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/JCameraListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/ResultListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/ReturnListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/listener/TypeListener.java" target-dir="src/com/cjt2325/cameralibrary/listener"/>
+		
+		<source-file src="src/android/com/cjt2325/cameralibrary/state/BorrowPictureState.java" target-dir="src/com/cjt2325/cameralibrary/state"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/state/BorrowVideoState.java" target-dir="src/com/cjt2325/cameralibrary/state"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/state/CameraMachine.java" target-dir="src/com/cjt2325/cameralibrary/state"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/state/PreviewState.java" target-dir="src/com/cjt2325/cameralibrary/state"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/state/State.java" target-dir="src/com/cjt2325/cameralibrary/state"/>
+		
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/AngleUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/AudioUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/CameraParamUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/CheckPermission.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/DeviceUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/FileUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/LogUtil.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		<source-file src="src/android/com/cjt2325/cameralibrary/util/ScreenUtils.java" target-dir="src/com/cjt2325/cameralibrary/util"/>
+		
+		<source-file src="src/android/com/cjt2325/cameralibrary/view/CameraView.java" target-dir="src/com/cjt2325/cameralibrary/view"/>
+		
+		 <source-file src="src/android/res/drawable/ic_camera.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/ic_flash_auto.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/ic_close_black_24dp.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/ic_flash_off.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/ic_flash_on.xml" target-dir="res/drawable"/>
+		
+		<source-file src="src/android/res/layout/activity_camera.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/camera_view.xml" target-dir="res/layout"/>
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="XiCamera">
+				<param name="ios-package" value="XiCamera"/>
+			</feature>
+		</config-file>
+		<header-file src="src/ios/XiCamera.h"/>
+		<source-file src="src/ios/XiCamera.m"/>
+		<header-file src="src/ios/lib/RocButton.h"/>
+		<source-file src="src/ios/lib/RocButton.m"/>
+		<header-file src="src/ios/lib/RocCameraViewController.h"/>
+		<source-file src="src/ios/lib/RocCameraViewController.m"/>
+
+		<resource-file src="src/ios/res/switchCamera@2X.png" />
+	</platform>
+</plugin>
